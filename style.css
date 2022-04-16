@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins";
+    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(28, 149, 153, 0.8)), url(./giphy-16.gif);
+    background-size: cover;
+    background-position: top;
+    color: #222222;
+    height: 100vh;
+}
+
+.container {
+    padding: 60px;
+    background-color: #fff;
+    margin: 15vh auto;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(34, 34, 34, 0.3);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.input-container {
+    display: flex;
+    border-bottom: 1px solid #bbcde5;
+}
+
+input {
+    font-size: 1.2rem;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    flex: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+#message {
+    font-size: 0.75rem;
+    padding: 10px;
+    color: #639fab;
+    background-color: rgba(99, 159, 171, 0.12);
+    display: none;
+    transition: 0.2s;
+}
+
+.btn {
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.2s all;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: translatey(-3px);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-copy {
+    display: inline;
+    margin-left: 8px;
+    background-color: none;
+    padding: 14px 16px;
+    position: relative;
+}
+
+.btn-copy:hover::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #639fab;
+    position: absolute;
+    left: 2.35rem;
+    top: 0.9rem;
+    z-index: 999;
+}
+
+.btn-copy:hover::after {
+    content: "Copy to Clipboard";
+    width: 114px;
+    position: absolute;
+    left: 2.75rem;
+    top: 0.5rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.75rem;
+    background-color: #460beb;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(34, 34, 34, 0.3);
+}
+
+.btn-generate {
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0 0;
+    background-color: #fc9712;
+    filter: brightness(1);
+}
+
+.btn-generate:hover {
+    filter: brightness(0.95);
+}
+
+.fa-lock {
+    margin-right: 6px;
+}
